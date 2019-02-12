@@ -1,0 +1,20 @@
+{
+  "name": "bear-sightings-api",
+  "version": "1.0.0",
+  "description": "API for reporting and viewing bear sightings data",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Allison Keane Barr <allisonkeane@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "sqlite3": "^4.0.6"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
