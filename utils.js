@@ -1,4 +1,5 @@
 const addEndOfDayTimestamp = (date) => `${date} 23:59:59`;
+const addStartOfDayTimestamp = (date) => `${date} 00:00:00`;
 
 const composeSqlWhereClause = (query, allowedKeys) => {
   const conditions = [];
@@ -9,7 +10,7 @@ const composeSqlWhereClause = (query, allowedKeys) => {
       switch (key) {
         case 'start_date':
           conditions.push('created_at >= ?');
-          args.push(addEndOfDayTimestamp(query.start_date));
+          args.push(addStartOfDayTimestamp(query.start_date));
           break;
         case 'end_date':
           conditions.push('created_at <= ?');

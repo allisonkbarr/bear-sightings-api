@@ -52,8 +52,8 @@ describe('composeSqlWhereClause', () => {
       expect(Array.isArray(result[1])).to.equal(true);
       expect(result[1].length).to.equal(3);
     });
-    it('appends the end of day time to start_date or end_date query params', () => {
-      expect(result[1][0]).to.equal('2019-01-01 23:59:59');
+    it('appends the start/end of day time to start_date or end_date query params', () => {
+      expect(result[1][0]).to.equal('2019-01-01 00:00:00');
       expect(result[1][1]).to.equal('2019-02-01 23:59:59');
     });
     it('does not include any values associated with NOT allowed keys', () => {
